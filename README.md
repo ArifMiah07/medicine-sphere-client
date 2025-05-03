@@ -1,4 +1,4 @@
-# 💊 Medi-Sphere — Full Stack Medicine Management App
+# 💊 Medi-Sphere — Full Stack Medicine Management App (Team Project)
 
 A complete, full-stack healthcare and medicine management platform designed with modern technologies to support efficient interaction between users and medicine data.
 
