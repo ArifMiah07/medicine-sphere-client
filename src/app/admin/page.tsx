@@ -30,7 +30,7 @@ export default function AdminDashboard() {
       setStockData(data);
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
-      // console.error('Error fetching stock data:', error);
+      console.error('Error fetching stock data:', error);
     }
   };
 
@@ -43,6 +43,7 @@ export default function AdminDashboard() {
         pendingPrescriptions: data.pendingPrescriptions,
         reviewRequired: data.reviewRequired,
       });
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       // console.error('Error fetching prescription data:', error);
     }
