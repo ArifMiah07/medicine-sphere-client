@@ -1,15 +1,15 @@
-# 💊 Medi-Sphere — Full Stack Medicine Management App (Team Project)
+# 💊 Medicine-Sphere — Full Stack Medicine Management App (Updated)
 
 A complete, full-stack healthcare and medicine management platform designed with modern technologies to support efficient interaction between users and medicine data.
 
-🌐 **Live Site:** [medi-sphere-five.vercel.app](https://medi-sphere-five.vercel.app/)  
-📁 **Repo:** [`medicine-sphere-client`](https://github.com/Faey2023/medi-sphere)
+🌐 **Live Site:** [medicine-sphere.vercel.app](https://medicine-sphere.vercel.app/)  
+📁 **Repo:** [`medicine-sphere-client`](https://github.com/ArifMiah07/medicine-sphere-client)
 
 ---
 
 ## 🧠 Project Overview
 
-**Medi-Sphere** is a robust, scalable, and secure medicine-focused web application.  
+**Medicine-Sphere** is a robust, scalable, and secure medicine-focused web application.  
 It allows users to explore medicines, manage their health needs, and securely interact with the platform through seamless frontend and backend integration.
 
 ---
@@ -39,12 +39,12 @@ Follow these steps to set up the project locally:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/Faey2023/medi-sphere
+   git clone https://github.com/ArifMiah07/medicine-sphere-client
 
 2. **Navigate into the project directory:**
 
 ```bash
-cd medi-sphere
+cd medicine-sphere
 ```
 
 3. **Install frontend & backend dependencies:**
