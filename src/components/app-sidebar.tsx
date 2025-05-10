@@ -23,7 +23,7 @@ import {
   Stethoscope,
   UserRoundPen,
 } from 'lucide-react';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { useSession } from 'next-auth/react';
 
 const adminItems = [
@@ -88,8 +88,10 @@ const userItems = [
   },
 ];
 
+
 export function AppSidebar() {
   const { data: session } = useSession();
+  // console.log(session,);
   return (
     <Sidebar className="h-screen">
       <SidebarHeader>
@@ -137,9 +139,11 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter>
-        <Link href="/">
+        <span>{session?.user?.name}</span>
+        <span>{session?.user?.email}</span>
+        {/* <Link href="/">
           <Image height={300} width={300} src={'/placeholder.png'} alt="Logo" />
-        </Link>
+        </Link> */}
       </SidebarFooter>
     </Sidebar>
   );

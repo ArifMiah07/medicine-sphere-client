@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { useSession } from 'next-auth/react';
@@ -57,51 +56,52 @@ export default function ProfilePage() {
     router.push(`/admin/profile/${user._id}/edit`);
   };
 
-  if (loading)
-    return (
-      <div>
-        <Spinner />
-      </div>
-    );
+  if (loading) return <div><Spinner /></div>;
   if (error) return <div>Error: {error}</div>;
   if (!user) return <div>User not found</div>;
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-50 p-4">
-      <Card className="w-full max-w-md rounded-2xl p-6 text-center shadow-xl">
-        <CardHeader>
-          <CardTitle className="text-center text-2xl font-semibold">
-            Profile
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4">
+    <div className="relative w-full max-w-5xl mx-auto">
+      {/* Cover Image */}
+      <div className="relative h-64 w-full">
+        <Image
+          src={`https://images.unsplash.com/photo-1500964757637-c85e8a162699?q=80&w=2103&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`}
+          alt="Cover"
+          fill
+          className="object-cover"
+        />
+      </div>
+
+      {/* Profile Section */}
+      <div className="relative z-10 -mt-20 flex flex-col sm:flex-row items-center sm:items-end sm:justify-between px-4 sm:px-8">
+        {/* Profile Picture */}
+        <div className="relative w-40 h-40 border-4 border-white rounded-full overflow-hidden shadow-lg">
           <Image
-            src={
-              user?.image ||
-              'https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png'
-            }
-            width={120}
-            height={120}
-            alt="User Image"
-            className="mx-auto rounded-full border border-gray-300"
+            src={user?.image || 'https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png'}
+            alt="User"
+            fill
+            className="object-cover"
           />
+        </div>
 
-          <div>
-            <h2 className="text-xl font-medium">Welcome, {user?.name}</h2>
-            <p className="text-muted-foreground">Email: {user?.email}</p>
-            <p className="text-muted-foreground">
-              Role: {user?.role || 'User'}
-            </p>
-            <p className="mt-1 text-xs text-gray-400">
-              ID: {user?._id || 'Not found'}
-            </p>
-          </div>
+        {/* Info + Button */}
+        <div className="mt-4 sm:mt-0 sm:ml-6 text-center sm:text-left flex-1">
+          <h1 className="text-2xl font-bold">{user?.name}</h1>
+          <p className="text-gray-500">{user?.email}</p>
+          <p className="text-sm text-muted-foreground">
+            Role: {user?.role || 'User'} | ID: {user?._id || 'Not found'}
+          </p>
+        </div>
 
-          <Button onClick={handleUpdateProfile} className="w-full">
-            {user?._id ? 'Update Profile' : 'Cannot Update'}
-          </Button>
-        </CardContent>
-      </Card>
+        <div className="mt-4 sm:mt-0">
+          <Button onClick={handleUpdateProfile}>Update Profile</Button>
+        </div>
+      </div>
+
+      {/* Optional Additional Content */}
+      <div className="mt-10 px-4 sm:px-8">
+        {/* Insert other cards or user-related content here */}
+      </div>
     </div>
   );
 }

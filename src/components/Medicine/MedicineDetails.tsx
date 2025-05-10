@@ -311,7 +311,7 @@ export default function MedicineDetails({ id }: { id: string }) {
                   Add to Cart
                 </Button>
                 <Button className="flex-1 cursor-pointer" variant="outline">
-                  Buy Now
+                  <Link href={'/cart'}>Buy Now</Link>
                 </Button>
               </div>
             </div>

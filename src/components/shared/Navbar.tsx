@@ -43,6 +43,8 @@ const Navbar = () => {
     }
   };
 
+  console.log("hiiiiiiiiiiiiiiiiii: ", process.env.NEXT_PUBLIC_API_BASE_URL);
+
   return (
     <div>
       {/* top bar */}

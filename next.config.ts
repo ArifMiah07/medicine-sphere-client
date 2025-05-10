@@ -23,6 +23,11 @@ module.exports = {
         hostname: 'demo2.themelexus.com',
         pathname: '**',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        pathname: '**',
+      },
     ],
   },
 };
