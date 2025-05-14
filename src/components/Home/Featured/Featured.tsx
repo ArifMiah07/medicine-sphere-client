@@ -11,7 +11,7 @@ import { IMedicine } from '@/types';
 import { useGetAllMedicineQuery } from '@/redux/api/productApi';
 
 const Featured = () => {
-  const { data } = useGetAllMedicineQuery(undefined, {
+  const { data, isLoading } = useGetAllMedicineQuery(undefined, {
     pollingInterval: 30000,
     refetchOnFocus: true,
     refetchOnMountOrArgChange: true,
@@ -40,6 +40,10 @@ const Featured = () => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+    if(isLoading){
+        return <span>Loading....</span>
+      }
 
   return (
     <div className="my-14 px-12">

@@ -114,8 +114,9 @@ const CartPage = () => {
         );
         dispatch(setCart(remainingItems));
       }
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       toast.error('Failed to Process!');
     }
   };

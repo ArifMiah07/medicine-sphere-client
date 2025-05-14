@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const DealProduct = () => {
-  const { data } = useGetAllMedicineQuery(undefined, {
+  const { data, isLoading } = useGetAllMedicineQuery(undefined, {
     pollingInterval: 30000,
     refetchOnFocus: true,
     refetchOnMountOrArgChange: true,
@@ -45,6 +45,10 @@ const DealProduct = () => {
           discountedPrice,
         };
       });
+
+      if(isLoading){
+        return <span>Loading....</span>
+      }
 
   return (
     <div className="my-14 px-6 md:px-12">

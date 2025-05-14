@@ -105,8 +105,9 @@ const CreateMedicineForm = () => {
         medicineData.append('image', selectedImage);
       }
 
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const response = await addMedicine(medicineData).unwrap();
-      console.log('Success:', response);
+      // console.log('Success:', response);
       toast.success('Medicine added successfully!');
 
       // reset form after successful submission

@@ -145,11 +145,12 @@ const UpdateMedicineForm = () => {
         medicineData.append('image', selectedImage);
       }
 
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const response = await updateMedicine({
         id,
         data: medicineData,
       }).unwrap();
-      console.log('Success:', response);
+      // console.log('Success:', response);
       toast.success('Medicine updated successfully!');
 
       // navigate back after successful update
