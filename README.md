@@ -6,7 +6,8 @@ A complete, full-stack healthcare and medicine management platform designed with
 📁 **Frontend Repo:** [`medicine-sphere-client`](https://github.com/ArifMiah07/medicine-sphere-client)
 📁 **Backend Repo:** [`medicine-sphere-backend`](https://github.com/ArifMiah07/medicine-sphere-backend)
 
-(This is project is mainly a group project)
+(This project is mainly a group project)
+
 🌐 **Live Site:** [medi-sphere.vercel.app](https://medi-sphere-five.vercel.app/)  
 📁 **Frontend Repo:** [`medi-sphere-client`](https://github.com/Faey2023/medi-sphere)
 📁 **Backend Repo:** [`medi-sphere-backend`](https://github.com/farrdin/medi-sphere-backend)
