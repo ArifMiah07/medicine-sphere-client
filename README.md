@@ -3,7 +3,7 @@
 A complete, full-stack healthcare and medicine management platform designed with modern technologies to support efficient interaction between users and medicine data.
 
 🌐 **Live Site:** [medicine-sphere.vercel.app](medi-sphere-one.vercel.app/)  
-📁 **Frontend Repo:** [`medicine-sphere-client`](https://github.com/ArifMiah07/medicine-sphere-client)
+<!--📁 **Frontend Repo:** [`medicine-sphere-client`](https://github.com/ArifMiah07/medicine-sphere-client)-->
 📁 **Backend Repo:** [`medicine-sphere-backend`](https://github.com/ArifMiah07/medicine-sphere-backend)
 
 (This project is mainly a group project)
